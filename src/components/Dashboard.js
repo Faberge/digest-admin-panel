@@ -13,12 +13,11 @@ function Dashboard() {
   return (
      <form>
        <h1>Dashboard</h1>
-         <Grid container>
-           {/*Заголовок */}
+         <Grid container>              
            <Grid item xs={4}>
+             <h2>Раздел в разработке</h2>
           </Grid>
           <Grid item xs={1}> </Grid>
-          {/*Аннотация */}
           <Grid item xs={7}>
           </Grid>
           <Grid item xs={6}>

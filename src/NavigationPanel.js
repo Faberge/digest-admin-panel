@@ -16,8 +16,8 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { MainListItems } from './listItems';
-
+import { MainListItems } from './ListItems';
+import Title from './Title';
 import Dashboard from './components/Dashboard';
 import NewsList from './components/NewsList';
 
@@ -119,8 +119,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-export default function NewsPanel() {
+export default function NavigationPanel() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -148,14 +147,16 @@ export default function NewsPanel() {
           </IconButton>
           
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            
+            Панель управления новостной лентой
           </Typography>
 
+          {/*Свободная кнопка под какую-нибудь фичу с модалтным окном*/}
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
+
         </Toolbar>
       </AppBar>
       <Drawer
@@ -172,14 +173,13 @@ export default function NewsPanel() {
         </div>
         <List>{MainListItems}</List>
       </Drawer>
-      {/*Основной контейнер для */}
+      {/*Основной контейнер */}
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Рабочая область для компонент */}
             <Grid item xs={12} md={12} lg={12}>
-
               <Switch>  
                 <Route exact path="/">
                   <Redirect to="/Dashboard" component={Dashboard}/>
