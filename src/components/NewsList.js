@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 //import ImageUpload from './ImageUpload';
 import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import CreateNewsForm from './CreateNewsForm';
 
