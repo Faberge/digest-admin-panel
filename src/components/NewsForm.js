@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
 
 const initialFieldValues = {
   id: 0,
-  title: "Титульник",
-  title_annotation: "Аннотация",
-  image_preview: "Превью",
+  title: "",
+  title_annotation: "",
+  image_preview: "",
   hashtag_list: "",
-  content: "Контент",
+  content: "",
   title_color: "Blue",
   font: "San-Francisco",
   published: true,
@@ -84,6 +84,7 @@ export default function NewsForm() {
         <Grid container item xs={9}>
           <Grid item xs={7}>
             <Controls.Input
+              variant="outlined"
               label="Заголовок"
               name="title"
               value={values.title}
