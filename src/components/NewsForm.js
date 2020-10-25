@@ -16,19 +16,19 @@ const useStyles = makeStyles((theme) => ({
 
 const initialFieldValues = {
   id: 0,
-  title: "",
-  title_annotation: "",
-  image_preview: "",
+  title: "Титульник",
+  title_annotation: "Аннотация",
+  image_preview: "Превью",
   hashtag_list: "",
-  content: "",
+  content: "Контент",
   title_color: "Blue",
-  font: "",
+  font: "San-Francisco",
   published: true,
   created_dt: new Date(),
 };
 
 //Валидация формы
-export default function CreateNewsForm() {
+export default function NewsForm() {
   const validate = (fieldValues = values) => {
     let temp = { ...errors };
     if ("title" in fieldValues) {
@@ -74,7 +74,7 @@ export default function CreateNewsForm() {
     if (validate()) {
       inputService.insertNews(values);
       resetForm();
-      window.alert("Статья опубликована на сервер!");
+      //window.alert("Статья опубликована на сервер!");
     }
   };
 

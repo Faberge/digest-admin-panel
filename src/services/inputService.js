@@ -14,22 +14,22 @@ export const getColorCollection = () => [
 
 const KEYS = {
   news: "news",
-  id: "id",
+  newsId: "newsId",
 };
 
 export function insertNews(data) {
   let news = getAllNews();
-  data["id"] = generateId();
+  data["id"] = generateNewsId();
   news.push(data);
   localStorage.setItem(KEYS.news, JSON.stringify(news));
 }
 
-export function generateId() {
-  if (localStorage.getItem(KEYS.news) == null) {
-    localStorage.setItem(KEYS.news, "0");
+export function generateNewsId() {
+  if (localStorage.getItem(KEYS.newsId) == null) {
+    localStorage.setItem(KEYS.newsId, "0");
   }
-  var id = parseInt(localStorage.getItem(KEYS.id));
-  localStorage.setItem(KEYS.id, (++id).toString());
+  var id = parseInt(localStorage.getItem(KEYS.newsId));
+  localStorage.setItem(KEYS.newsId, (++id).toString());
   return id;
 }
 
