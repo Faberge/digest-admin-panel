@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
      textAlign: 'center',
      color: theme.palette.text.secondary,
    },
+
+
+
  }));
 
 const initialFieldValues ={
@@ -74,11 +77,19 @@ export default function CreateNewsForm() {
                         options={inputService.getColorCollection()}
                      />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={6}>
                      <Controls.Input 
                         label='Картинка превью'
-                        name='content'
-                        value={values.content}
+                        name='image_preview'
+                        value={values.image_preview}
+                        onChange={handleInputChange}
+                     />
+                  </Grid>
+                  <Grid item xs={6}>
+                     <Controls.DatePicker
+                        label='Дата'
+                        name='created_dt' 
+                        value={values.created_dt}
                         onChange={handleInputChange}
                      />
                   </Grid>
@@ -91,12 +102,28 @@ export default function CreateNewsForm() {
                         onChange={handleInputChange}
                      />
                   </Grid>
+
                </Grid>
                <Grid container item xs={3}>
                   <Grid item xs={12}>
                      <Paper className={classes.paper}>Место под макет телефона</Paper>
                   </Grid>
                </Grid>
+
+               <Controls.Button
+                  type='submit'
+                  color='primary'
+                  size='medium'
+                  text='Создать'
+               />
+
+               <Controls.Button
+                  type='cancel'
+                  color='default'
+                  size='medium'
+                  text='Отмена'
+               /> 
+
             </Grid>
          </Form>
    )
