@@ -1,15 +1,15 @@
-import Input from './Input';
-import Select from './Select';
-import SelectColor from './SelectColor';
-import DatePicker from './DatePicker';
-import Button from './Button';
+import Input from "./Input";
+import Select from "./Select";
+import SelectColor from "./SelectColor";
+import DatePicker from "./DatePicker";
+import Button from "./Button";
 
 const Controls = {
-  Input, 
+  Input,
   Select,
   SelectColor,
   DatePicker,
-  Button
+  Button,
 };
 
 export default Controls;

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import NavigationPanel from "./NavigationPanel";
 
 function App() {
   return (
     <div>
-        <NavigationPanel />
+      <NavigationPanel />
     </div>
   );
 }
