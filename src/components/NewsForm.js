@@ -28,7 +28,8 @@ const initialFieldValues = {
 };
 
 //Валидация формы
-export default function NewsForm() {
+export default function NewsForm(props) {
+  const { addOrEdit } = props;
   const validate = (fieldValues = values) => {
     let temp = { ...errors };
     if ("title" in fieldValues) {
@@ -72,8 +73,7 @@ export default function NewsForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      inputService.insertNews(values);
-      resetForm();
+      addOrEdit(values, resetForm);
       //window.alert("Статья опубликована на сервер!");
     }
   };

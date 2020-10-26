@@ -3,6 +3,7 @@ import Select from "./Select";
 import SelectColor from "./SelectColor";
 import DatePicker from "./DatePicker";
 import Button from "./Button";
+import ActionButton from "./ActionButton";
 
 const Controls = {
   Input,
@@ -10,6 +11,7 @@ const Controls = {
   SelectColor,
   DatePicker,
   Button,
+  ActionButton,
 };
 
 export default Controls;
